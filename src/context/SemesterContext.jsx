@@ -1,4 +1,4 @@
-// src/context/SemesterContext.js
+
 import React, { createContext, useState, useEffect } from 'react';
 
 export const SemesterContext = createContext();
@@ -7,7 +7,7 @@ export const SemesterProvider = ({ children }) => {
     const [semesters, setSemesters] = useState([]);
 
     useEffect(() => {
-        // Fetch or initialize your semester data here
+       
         setSemesters([
             { id: '1', name: 'Semester 1' },
             { id: '2', name: 'Semester 2' },
