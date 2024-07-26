@@ -1,4 +1,4 @@
-// src/context/SubjectsContext.js
+
 import React, { createContext, useState } from 'react';
 
 export const SubjectsContext = createContext();
