@@ -1,0 +1,380 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  overflow-y: scroll;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-right: 10px;
+  background-color: white;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: black;
+  height: calc(100vh - 70px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #333;
+}
+
+/* Content styles */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+  padding-top: 80px;
+  min-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+/* Specific page styles */
+.about-container,
+.subjectPage {
+  margin-left: 220px;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.about-content,
+.semesterSubjects {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1,
+.semesterSubjects h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.semesterSubjects {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.semesterSubjects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.semesterSubjects li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.semesterSubjects li:last-child {
+  border-bottom: none;
+}
+
+.semesterSubjects button,
+.addSemester button,
+.notice button,
+.answer button,
+.subject-teacher-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.semesterSubjects button:hover,
+.addSemester button:hover,
+.notice button:hover,
+.answer button:hover,
+.subject-teacher-form button:hover {
+  background-color: #388e3c;
+}
+
+.notice-form h2,
+.answer-form h2,
+.subject-teacher-form h2 {
+  text-align: center;
+}
+
+.notice-form,
+.notice,
+.answer {
+  margin-bottom: 20px;
+}
+
+.notice-form h2,
+.notice h2,
+.answer h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.notice-form .form-group,
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea,
+.subject-teacher-form input[type="text"],
+.subject-teacher-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.notice {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.notice button {
+  background-color: #f44336;
+}
+
+.notice button:hover {
+  background-color: #d32f2f;
+}
+.sidebar {
+  width: 220px;
+  background-color: black;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-closed .sidebar {
+  transform: translateX(-100%);
+}
+
+.sidebar-open .sidebar {
+  transform: translateX(0);
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
+  align-items: right;
+}
+
+/* Content styles */
+.layout {
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-closed .layout {
+  margin-left: 0;
+}
+
+.sidebar-open .layout {
+  margin-left: 220px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+/* General Table Styles */
+.table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #e9ecef;
+}
+
+.table .btn {
+  margin: 0;
+}
+
+/* Specific Styles for Action Buttons */
+.table .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.table .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Styles for Page Containers */
+.notice-page .notices, 
+.subject-teacher-page .semester-teachers, 
+.combined-page .data-table {
+  margin-top: 20px;
+}
+
+/* Styles for Offcanvas Forms */
+.offcanvas .form-group {
+  margin-bottom: 15px;
+}
+
+.offcanvas .form-label {
+  font-weight: bold;
+}
+
+.offcanvas .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.offcanvas .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.offcanvas .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.offcanvas .btn-close {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+/* Customizing the Offcanvas Component */
+.offcanvas {
+  padding: 1rem;
+}
+
+.offcanvas-header, .offcanvas-body {
+  padding: 1rem;
+}
+
+/* Styles for Buttons in Offcanvas and Main Content */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
