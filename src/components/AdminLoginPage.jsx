@@ -18,7 +18,7 @@ const AdminLoginPage = () => {
             // Handle registration
             console.log('Registering with', name, email, password);
         }
-        navigate('/admin-panel'); // Redirect after login/registration
+        navigate('/admin-panel'); 
     };
 
     return (
