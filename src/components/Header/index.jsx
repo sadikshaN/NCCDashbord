@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdMenu } from 'react-icons/md';
-import Icone from './Icone'; // Ensure this imports your icon component correctly
+import Icone from './Icone'; 
 
 const Header = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(true);
